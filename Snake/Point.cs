@@ -12,8 +12,20 @@ namespace Snake
         public int y;
         public char sym;
 
-        public void Draw() {
-            Console.SetCursorPosition(x, y);//установить курсор на позицию
+        public Point()//КОНСТРУКТОР!!! всегда задан неявно, по умолч ничего не возвращает
+        { 
+        }
+
+        public Point(int _x, int _y, char _sym) //создаем конструктор для упрощения подачи значений
+        {
+            x = _x;
+            y = _y;
+            sym = _sym;
+        }
+
+        //ключевое слово void указывает что функция ничего не возвращает
+        public void Draw() {        
+            Console.SetCursorPosition(x, y);
             Console.Write(sym);
         }
     }
